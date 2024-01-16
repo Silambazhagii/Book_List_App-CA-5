@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.loader {
+    align-items: center;
+    text-align: center;
+    margin-left: 40%;
+    margin-top: 10%;
+    justify-content: center;
+    animation: spin 1.5s linear infinite;
+  }
+  
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg);}
+}
