@@ -131,11 +131,16 @@ function Forms() {
                 </div>
 
                 <div className='flex text-sm'>
-                    <input type="checkbox" {...register('agree')} id="agree" />
-                    <label htmlFor="agree" className='ml-3 cursor-pointer'>
+                    <input type="checkbox" 
+                     id="agree" 
+                    {...register('agree', {required: " You must accept all the terms and conditions"})}
+                     />
+                    <label className='ml-3 cursor-pointer'>
                         I agree all statements in <span className='underline'>Terms of service</span>
                     </label>
                 </div>
+                {errors.agree && <span className='text-red-600 text-sm'>{errors.agree.message}</span>}
+
                 <div className='flex justify-center mt-3'>
                     <button
                         type="submit"
